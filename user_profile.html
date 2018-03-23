@@ -1,13 +1,14 @@
 <!DOCTYPE html>
- <html>
- <head>
-     <title>Create Account</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<html>
+<head>
+    <title>User_profile</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
@@ -18,10 +19,56 @@
             }
         }
         </script>
- <style>
-    .topnav {
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;
+
+        box-sizing: border-box;}
+        
+    button {
+       background-color: #4CAF50;
+       
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+}
+    
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        }
+
+    img.avatar {
+        float: top;
+        padding-top: 16px;
+        width: 10%;
+        height: 10%;
+        border-radius: 50%;
+    
+
+    
+        
+        }
+
+    .cancel {
+        background-color: white;
+    }
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+
+            width: 100%;
+            }
+    }
+    body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
   overflow: hidden;
-  background-color:black;
+  background-color: #333;
 }
 
 .topnav a {
@@ -35,12 +82,12 @@
 }
 
 .topnav a:hover {
-  background-color: rgb(221, 221, 221);
+  background-color: #ddd;
   color: black;
 }
 
 .active {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   color: black;
 }
 
@@ -69,73 +116,68 @@
     text-align: left;
   }
 }
-body { 
- background: url('/assets/example/bg_suburb.jpg') no-repeat center center fixed; 
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
-}
+</style>
+</head>
+<body>
 
-.panel-default {
- opacity: 0.9;
- margin-top:30px;
-}
-.form-group.last {
- margin-bottom:0px;
-}
- </style>
- </head>
- <body>
+
     <div class="topnav" id="myTopnav">
         <a href="#home" class="active">Home</a>
-        <a href="#news">Books Available</a>
+        <a href="#news">Books available</a>
         <a href="#contact">Borrow book</a>
         <a href="#about">Profile</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-   </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <strong>Registration</strong>
-                    </div>
-                    <div class="panel-body">
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
-                                <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter email" required="">
+    </div>
+    
+              
+             
+              
+ <h1> UserName:</h1>   
+<form action="#">
+    <div class="imgcontainer">
+      <img src="icon.png" alt="Avatar" class="avatar">
+      
+    </div>
+    </form>
+    <h2> Email:</h2>
+    <h3>Books Borrowed</h3>
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>BookName</th>
+                    <th>AUTHOR</th>
+                    <th>ISBN</th>
+                    <th>CATEGORY</th>
+                    <th>DATE BORROWED</th>
+                    <th>DATE TO BE RETURNED</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rolling Stone</td>
+                    <td>Gaza</td>
+                    <td>8-760</td>
+                    <td>Magazine</td>
+                    <td>13/1/2018</td>
+                    <td>14/2/2018</td>
+                </tr>
+                <tr>
+                </tbody>
+                </table>
+                <h4>Return BOOK</h4>
+                <div class="container">
+      
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 "> <label for="uname"><b>Book ISBN</b></label>
+                                <input type="text" placeholder="Enter Book ISBN" name="uname" required><br>
+                                <label for="psw"><b>Book Title</b></label>
+                                <input type="text" placeholder="Enter Book Title" name="psw" required>
+                          
+                      
+                                <button type="submit">Return</button>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
-                                <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Enter password" required="">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox">Remember me
-                                        </label>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group last">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <button type="submit" class="btn btn-success btn-sm">Create account</button>
-                                    <button type="reset" class="btn btn-default btn-sm">Reset</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="panel-footer"> Already Registered? <a href="#">login here</a></div> <!--i still have to add href link-->
-                    </div>
-                </div>
-            </div>
-        </div>      
- </body>
- </html>
+    </body>
+    </html>
